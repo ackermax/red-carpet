@@ -1,0 +1,32 @@
+{
+  "name": "new-package",
+  "version": "1.0.0",
+  "description": "Red Carpet movie reference model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ackermax/red-carpet.git"
+  },
+  "keywords": [
+    "Movie",
+    "Oscar",
+    "Red",
+    "Carpet"
+  ],
+  "author": "PAWA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ackermax/red-carpet/issues"
+  },
+  "homepage": "https://github.com/ackermax/red-carpet#readme",
+  "dependencies": {
+    "cli": "^1.0.1",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.32.1"
+  }
+}

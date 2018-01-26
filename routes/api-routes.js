@@ -9,6 +9,7 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for getting all of the Movies
+
   app.post("/api/movies", function(req, res) {
     var body = req.body;
     var query = {};.que
@@ -23,14 +24,15 @@ module.exports = function(app) {
     }
     if (body.won) {
       query.won = "YES";
+
     }
-    // 1. Add a join here to include all of the Authors to these Movies
     db.Movie.findAll({
       where: query
     }).then(function(dbMovie) {
       res.json(dbMovie);
     });
   });
+
 
 //   // Get rotue for retrieving a single Movie
 //   app.get("/api/Movies/:id", function(req, res) {

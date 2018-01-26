@@ -33,14 +33,14 @@ Table
 			Password
 
 ## Technologies:
-* Body-Parser
-* Express
-* Express-Handlebars
-* Materialize
-* MySQL2
-* Path
-* Sequelize
-* Sequelize-CLI
+* Body-Parser - https://www.npmjs.com/package/body-parser
+* Express - https://www.npmjs.com/package/express
+* Express-Handlebars - https://www.npmjs.com/package/express-handlebars
+* Materialize - http://materializecss.com/
+* MySQL2 - https://www.npmjs.com/package/mysql2
+* Path - https://www.npmjs.com/package/path
+* Sequelize - https://www.npmjs.com/package/sequelize
+* Sequelize-CLI - https://www.npmjs.com/package/sequelize-cli
 
 ## New Technology:
 Passport - Jason
@@ -57,7 +57,7 @@ Mark **P**owalisz
 Max **A**ckerman
 Steve **W**alker
 Jason **A**pfel
-*Team Lead: Max*
+  *Team Lead:Max *
 
 
 

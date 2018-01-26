@@ -13,7 +13,11 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  // cms route loads cms.html
+  app.get("/search", function(req, res){
+    res.render("index");
+  });
+
+  // queue route loads watchlist
   app.get("/watchlist", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/watchlist.html"));
   });

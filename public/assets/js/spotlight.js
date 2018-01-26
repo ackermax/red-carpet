@@ -10,5 +10,4 @@ $('.searchlight')
             $(this).remove();
             location.href = "views/layouts/main.handlebars";
         });
-    })
-    ;
+    });

@@ -20,17 +20,31 @@ MySQL Database
 Award show notifications
 
 ## Database:
-Table
-	Movies
-        Columns
-	        Title
-	        Rating
-	        Watched
-	Users
-		Columns		
-            Name
-			Email (Username)
-			Password
+* Table
+	* Users
+		* Columns
+			* User_ID
+			* FName
+			* LName
+			* Username/Email
+	
+	* UserData
+        * Columns
+			* User_ID
+	        * Movie_ID
+	        * Rating
+	        * Watched
+
+	* MovieData
+        * Columns
+	        * Movie_ID
+	        * Year
+	        * Category
+			* Nominee/Movie
+			* AddInfo
+			* Won
+			* Poster HREF
+			* IMDB HREF
 
 ## Technologies:
 * Body-Parser - https://www.npmjs.com/package/body-parser

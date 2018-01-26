@@ -11,10 +11,9 @@ module.exports = function(app) {
   // GET route for getting all of the Movies
   app.get("/api/movies", function(req, res) {
     var query = {};
-    if (req.query.author_id) {
-      query.AuthorId = req.query.author_id;
+    if (req.query.user_id) {
+      query.UserId = req.query.user_id;
     }
-    // 1. Add a join here to include all of the Authors to these Movies
     db.Movie.findAll({
       where: query
     }).then(function(dbMovie) {
@@ -22,9 +21,8 @@ module.exports = function(app) {
     });
   });
 
-  // Get rotue for retrieving a single Movie
+  // Get route for retrieving a single Movie
   app.get("/api/Movies/:id", function(req, res) {
-    // 2. Add a join here to include the Author who wrote the Movie
     db.Movie.findOne({
       where: {
         id: req.params.id
@@ -35,14 +33,26 @@ module.exports = function(app) {
     });
   });
 
-  // Movie route for saving a new Movie
+    // Get route for retrieving a single Category
+    app.get("/api/Movies/:category", function(req, res) {
+      db.Movie.findOne({
+        where: {
+          id: req.params.category
+        }
+      }).then(function(dbMovie) {
+        console.log(dbMovie);
+        res.json(dbMovie);
+      });
+    });
+
+  // Movie route for saving a new Movie to Watchlist
   app.Movie("/api/Movies", function(req, res) {
     db.Movie.create(req.body).then(function(dbMovie) {
       res.json(dbMovie);
     });
   });
 
-  // DELETE route for deleting Movies
+  // DELETE route for deleting Movies from Watchlist
   app.delete("/api/Movies/:id", function(req, res) {
     db.Movie.destroy({
       where: {
@@ -53,7 +63,7 @@ module.exports = function(app) {
     });
   });
 
-  // PUT route for updating Movies
+  // PUT route for updating Watched status
   app.put("/api/Movies", function(req, res) {
     db.Movie.update(
       req.body,

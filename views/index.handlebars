@@ -1,0 +1,68 @@
+<header style="text-align:center">
+    <img src="assets/img/ss.png" width="350px"> </header>
+
+<h1>{{user.name}}&nbsp;Queue</h1>
+
+<div class="container" style="text-align:center">
+    <div class="row">
+
+        <div class="col s12 m2">
+            <p class="z-depth-5">z-depth-5</p>
+        </div>
+
+        <h3>Build your query</h3>
+        <!-- Movie Title Input Field-->
+        <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Movie Title</label>
+        </div>
+        <!-- Category Input Field - Select 1 Only-->
+        <div class="input-field col s12">
+            <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Actor — Leading Role</option>
+                <option value="2">Actor — Supporting Role</option>
+                <option value="3">Actress — Leading Role</option>
+                <option value="3">Actress — Supporting Role</option>
+                <option value="3">Animated Feature Film</option>
+                <option value="3">Art Direction</option>
+                <option value="3">Cinematography</option>
+                <option value="3">Costume Design</option>
+                <option value="3">Directing</option>
+                <option value="3">Documentary (Feature)</option>
+                <option value="3">Documentary (Short Subject)3</option>
+                <option value="3">Film Editing</option>
+                <option value="3">Foreign Language Film</option>
+                <option value="3">Makeup</option>
+                <option value="3">Music (Scoring)</option>
+                <option value="3">Music (Song)</option>
+                <option value="3">Best Picture</option>
+                <option value="3">Short Film (Animated)</option>
+                <option value="3">Short Film (Animated)</option>
+                <option value="3">Short Film (Live Action)</option>
+                <option value="3">Sound</option>
+                <option value="3">Sound Editing</option>
+                <option value="3">Visual Effects</option>
+                <option value="3">Writing</option>
+            </select>
+            
+            <label>Select Categories</label>
+        </div>
+        <!-- Year Select Field -Requires script below -->
+        <input type="text" class="timepicker">
+
+    </div>
+</div>
+
+
+<!-- Need to move this script to a remote file- it controls years to select-->
+<script> 
+    $('.datepicker').pickadate({
+        //selectMonths: true, // Creates a dropdown to control month
+        selectYears: 90, // Creates a dropdown of 15 years to control year,
+        //today: 'Today',
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: true // Close upon selecting a date,
+    });
+</script>

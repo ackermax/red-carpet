@@ -1,0 +1,26 @@
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: black;
+    color: white;    
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .brand-logo {
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  nav {
+      background-color: red;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+      
+  .page-footer {
+      background-color: red;
+  }

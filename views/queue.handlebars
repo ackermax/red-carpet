@@ -1,0 +1,64 @@
+<main>
+    <!-- This View will require formatting once we have data flowing in. I've begun coding 2 diffeeret ways to display results. Once data is flowing we can decide which is best or take an entirely new approach -->
+
+    <!-- Define left-aligned container -->
+    <div class="container" style="text-align:left">
+        <div class="row">
+            <!-- Welcome logged in user personally to their queue -->
+            <h1>{{user.name}}'s&nbsp;Queue</h1>
+
+            <!-- Box to hold movie poster (requires script below to display movie poster dynamically) -->
+            <img class="materialboxed" width="550" src="images/#.jpg">
+
+            <!-- Close row -->
+        </div>
+
+        <div class="row-results">
+
+            <div class="col s12 m7">
+                <h2 class="header">Horizontal Card</h2>
+                <div class="card horizontal medium">
+                    <div class="card-image">
+                        <img src={{movie_poster}}>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <p>{{Title}}
+                                <br> {{Award}}
+                                <br> {{synopsis}}
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Link - Where to Watch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Close row-results-->
+        </div>
+
+        <!-- Close container -->
+    </div>
+
+</main>
+
+    <!-- JS to display movie poster dynamically (materialboxed) -->
+    <script>
+        $(document).ready(function () {
+            $('.materialboxed').materialbox();
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</main>

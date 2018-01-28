@@ -1,25 +1,58 @@
-# Red-Carpet
+# Red-Carpet :clapper: :movie_camera:
 
-## Title:
-Red Carpet
+## Table of Contents
+- [Red-Carpet ](#red-carpet-clapper-moviecamera)
+	- [Table of Contents:](#table-of-contents)
+	- [Concept](#concept)
+	- [Deployment](#deployment)
+	- [Screenshots of this Project](#screenshots-of-this-project)
+	- [API](#api)
+	- [Needs](#needs)
+		- [Nice to Haves](#nice-to-haves)
+	- [Database](#database)
+	- [Technologies](#technologies)
+		- [New Technology](#new-technology)
+		- [Buzzwords](#buzzwords)
+	- [Authors](#authors)
+	- [License](#license)
 
-## Concept:
-Create and manage your own personal list of award winning (and nominated films), with reviews, a watched list, and priority lists based on when which awards shows are coming up next. Red Carpet is the perfect tool for your elitist movie-watching needs!
+## Concept
 
-## API:
+>Create and manage your own personal list of award winning (and nominated films), with reviews, a watched list, and priority lists based on when which awards shows are coming up next. Red Carpet is the perfect tool for your elitist movie-watching needs!
+
+## Deployment
+
+This app has been deployed to Heroku and can be used by following the link below:
+
+[Red Carpet](https://red-carpet-app.herokuapp.com/ "Red Carpet - https://red-carpet-app.herokuapp.com")
+
+## Screenshots of this Project
+
+![Red Carpet Splash Page](https://raw.github.com/ackermax/Red_Carpet/master/public/assets/images/screenshot1.gif "Red Carpet Splash Page")
+
+![Red Carpet Search Page](https://raw.github.com/ackermax/Red_Carpet/master/screenshot/screenshot2.png "Red Carpet Search Page")
+
+![Red Carpet Queue Page](https://raw.github.com/ackermax/Red_Carpet/master/screenshot/screenshot3.png "Red Carpet Queue Page")
+
+## API
+
 OMDB API can provide awards information
 
-## Needs:
+## Needs
+
 Aesthetics - Steve…
 Mobile Responsiveness
 Proper documentation
 Make sure every push has content and context.
 MySQL Database
 
-## Nice to Haves:
+### Nice to Haves
+
 Award show notifications
 
-## Database:
+## Database
+
+```
 * Table
 	* Users
 		* Columns
@@ -45,8 +78,10 @@ Award show notifications
 			* Won
 			* Poster HREF
 			* IMDB HREF
+```
 
-## Technologies:
+## Technologies
+
 * Body-Parser - https://www.npmjs.com/package/body-parser
 * Express - https://www.npmjs.com/package/express
 * Express-Handlebars - https://www.npmjs.com/package/express-handlebars
@@ -56,23 +91,28 @@ Award show notifications
 * Sequelize - https://www.npmjs.com/package/sequelize
 * Sequelize-CLI - https://www.npmjs.com/package/sequelize-cli
 
-## New Technology:
+### New Technology
+
 Passport - Jason
 
-## Buzzwords:
+### Buzzwords
+
 Time Management??? - Movie tickets… Streaming Options
 Automation???
 Parenting - Content (Nice to Have)
 Music - Soundtracks (Nice to Have)
 
-## Author:
-## PAWA
-Mark **P**owalisz
-Max **A**ckerman
-Steve **W**alker
-Jason **A**pfel
+## Authors
 
-  *Team Lead:Max *
+> **Team PAWA**
++ Mark **P**owalisz
++ Max **A**ckerman https://github.com/ackermax
++ Steve **W**alker https://github.com/captnwalker
++ Jason **A**pfel
+  - *Team Lead: Max *
 
+## License
 
+????
 
+![Filmocat](https://octodex.github.com/images/filmtocat.png)

@@ -8,6 +8,6 @@ $('.searchlight')
     .on('click', function () {
         $(this).fadeOut(function () {
             $(this).remove();
-            location.href = "../views/layouts/main.handlebars";
+            location.href = "../../../views/layouts/main.handlebars";
         });
     });

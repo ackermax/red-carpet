@@ -11,6 +11,8 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 var db = require("./models");
+var auth = require("./routes/auth-routes.js")(app, passport);
+require("./config/passport.js")(passport, db.user);
 
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars"); 

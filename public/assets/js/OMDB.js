@@ -3,7 +3,7 @@ var chalk = require('chalk');
 
 // Variable for User's movie
 var movie = "Oblivion";
-var actor = "Tom Cruise"
+var actor = "Tom Cruise";
 
 // Queries OMDB API for relevant movie data
 // $("#find-movie").on("click", function (event) {

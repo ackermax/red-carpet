@@ -28,6 +28,9 @@ app.use(session({ secret: "codingbootcamp", resave: true, saveUninitialized: tru
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login
 
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
 db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
         console.log("Red Carpet is now listening on PORT " + PORT);

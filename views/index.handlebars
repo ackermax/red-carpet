@@ -1,6 +1,6 @@
 <main>
     <!-- This View will require formatting once we have data flowing in -->
-
+    <script type="text/javascript" src="assets/js/search.js"></script>
 
 
     <div class="container" style="text-align:center">
@@ -9,56 +9,67 @@
 
 
             <!-- Welcome logged in user personally to their queue -->
-            <div class="col s12 m2">
-                <p class="z-depth-5">z-depth-5</p>
+            <div class="col s12 m12">
 
 
-                <h3>Build your query</h3>
+                <h3>Movie Search!</h3>
 
                 <!-- Movie Title Input Field-->
-                <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Movie Title</label>
-                </div>
-                
-                <!-- Category Input Field - Select 1 Only-->
-                <div class="input-field col s12">
-                    <select>
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">Actor — Leading Role</option>
-                        <option value="2">Actor — Supporting Role</option>
-                        <option value="3">Actress — Leading Role</option>
-                        <option value="3">Actress — Supporting Role</option>
-                        <option value="3">Animated Feature Film</option>
-                        <option value="3">Art Direction</option>
-                        <option value="3">Cinematography</option>
-                        <option value="3">Costume Design</option>
-                        <option value="3">Directing</option>
-                        <option value="3">Documentary (Feature)</option>
-                        <option value="3">Documentary (Short Subject)3</option>
-                        <option value="3">Film Editing</option>
-                        <option value="3">Foreign Language Film</option>
-                        <option value="3">Makeup</option>
-                        <option value="3">Music (Scoring)</option>
-                        <option value="3">Music (Song)</option>
-                        <option value="3">Best Picture</option>
-                        <option value="3">Short Film (Animated)</option>
-                        <option value="3">Short Film (Animated)</option>
-                        <option value="3">Short Film (Live Action)</option>
-                        <option value="3">Sound</option>
-                        <option value="3">Sound Editing</option>
-                        <option value="3">Visual Effects</option>
-                        <option value="3">Writing</option>
-                    </select>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="input-field col s12">
+                            <input id="movie" type="text" class="validate">
+                            <label for="movie">Movie Title (Optional)</label>
+                        </div>
 
-                    <label>Select Categories</label>
-                </div>
-                <!-- Year Select Field -Requires script below -->
-                <input type="text" class="timepicker">
+                        <!-- Category Input Field - Select 1 Only-->
+                        <div class="input-field col s12">
+                            <select name="category" id="category">
+                                <option value="Best Picture">Best Picture</option>
+                                <option value="Actor — Leading Role">Actor — Leading Role</option>
+                                <option value="Actor — Supporting Role">Actor — Supporting Role</option>
+                                <option value="Actress — Leading Role">Actress — Leading Role</option>
+                                <option value="Actress — Supporting Role">Actress — Supporting Role</option>
+                                <option value="Animated Feature Film">Animated Feature Film</option>
+                                <option value="Art Direction">Art Direction</option>
+                                <option value="Cinematography">Cinematography</option>
+                                <option value="Costume Design">Costume Design</option>
+                                <option value="Directing">Directing</option>
+                                <option value="Documentary (Feature)">Documentary (Feature)</option>
+                                <option value="Documentary (Short Subject)">Documentary (Short Subject)</option>
+                                <option value="Film Editing">Film Editing</option>
+                                <option value="Foreign Language Film">Foreign Language Film</option>
+                                <option value="Makeup">Makeup</option>
+                                <option value="Music (Scoring)">Music (Scoring)</option>
+                                <option value="Music (Song)">Music (Song)</option>
+                                <option value="Short Film (Animated)">Short Film (Animated)</option>
+                                <option value="Short Film (Live Action)">Short Film (Live Action)</option>
+                                <option value="Sound">Sound</option>
+                                <option value="Sound Editing">Sound Editing</option>
+                                <option value="Visual Effects">Visual Effects</option>
+                                <option value="Writing">Writing</option>
+                            </select>
 
-                <!-- Submit Button with movie icon to left of text -->
-                <a class="waves-effect waves-light btn-large">
-                    <i class="material-icons left">movie</i>Search</a>
+                            <label>Academy Award Category (Required)</label>
+                        </div>
+                        <!-- Year Select Field -Requires script below -->
+                        <div class="input-field col s12">
+                            <select name="year" id="year">
+                            </select>
+                            <label>Year (Required)</label>
+                        </div>
+                        <div class="col s12">
+                            <p>
+                                <input name="winners" type="checkbox" id="winners" />
+                                <label for="winners">Show Oscar Winners Only</label>
+                            </p>
+                        </div>
+
+                        <!-- Submit Button with movie icon to left of text -->
+                        <a class="waves-effect waves-light btn-large">
+                            <i class="material-icons left">movie</i> Search</a>
+                    </form>
+                </div>
 
             </div>
             <!-- Close column -->
@@ -67,13 +78,3 @@
     </div>
     <!-- Close container -->
 </main>
-
-<!-- Need to move this script to a remote file- it controls years to select-->
-<script> 
-    $('.datepicker').pickadate({
-        selectYears: 90, // Creates a dropdown of 15 years to control year       
-        clear: 'Clear',
-        close: 'Ok',
-        closeOnSelect: true // Close upon selecting a date
-    });
-</script>

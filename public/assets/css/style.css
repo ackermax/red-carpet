@@ -71,3 +71,24 @@
     color: #b99435;
   }
   
+
+  /* Media Queries */
+
+@media screen and (max-width:980px) {  
+}
+
+@media screen and (max-width:768px) {
+}
+
+@media screen and (max-width:640px) {
+}
+
+@media (max-width: 768px) {  
+}
+
+/* Adjust size of title on smaller screens to preserve rainbow effect */
+@media (max-width: 640px) {
+    .brand-logo {
+      font-size: 1.3em;
+    }
+}

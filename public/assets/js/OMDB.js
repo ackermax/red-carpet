@@ -70,6 +70,7 @@ function getStreaming() {
 function getSoundtrack() {
     client.itemSearch({
         title: movie,
+        keywords: 'soundtrack',
         searchIndex: 'MP3Downloads',
         responseGroup: 'ItemAttributes,Offers,Images'
     }).then(function (results) {
@@ -82,4 +83,4 @@ function getSoundtrack() {
     });
 }
 
-getSoundtrack();
+getStreaming();

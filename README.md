@@ -105,11 +105,11 @@ Music - Soundtracks (Nice to Have)
 ## Authors
 
 > **Team PAWA**
-+ Mark **P**owalisz
++ Mark **P**owalisz https://github.com/FenixRising13
 + Max **A**ckerman https://github.com/ackermax
 + Steve **W**alker https://github.com/captnwalker
-+ Jason **A**pfel
-  - *Team Lead: Max *
++ Jason **A**pfel https://github.com/jasapper
+  - *Team Lead: Max*
 
 ## License
 

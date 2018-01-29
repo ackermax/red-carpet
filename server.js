@@ -31,6 +31,7 @@ app.use(passport.session()); // persistent login
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
+// Coonects Sequelize to models directory
 db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
         console.log("Red Carpet is now listening on PORT " + PORT);

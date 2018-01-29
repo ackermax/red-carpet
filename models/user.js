@@ -40,7 +40,8 @@ module.exports = function(sequelize, Sequelize) {
   
     User.associate = function(models) {
       // Associating User with Movies
-      // When an User is deleted, also delete any associated Movies
+      // Each user has multiple movies to their ID
+      // When a User is deleted, also delete any associated Movies
       User.hasMany(models.UserMovie, {
         onDelete: "cascade"
       });

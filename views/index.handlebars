@@ -5,7 +5,7 @@
 
     <div class="container" style="text-align:center">
         <br>
-        <div class="row z-depth-3 grey lighten-4">
+        <div class="row z-depth-3 grey lighten-3" id="rounded">
 
 
 
@@ -13,17 +13,17 @@
             <div class="col s12 m12">
 
 
-                <h3 class="red-text text-darken-4">Movie Search!</h3>
+                <h3 class="red-text text-darken-4 brand-logo">Nominee Search</h3>
                 <!-- Movie Title Input Field-->
                 <div class="row">
                     <form class="col s12">
                         <div class="input-field col s12">
-                            <input id="movie" type="text" class="validate">
+                            <input id="movie" type="text" class="validate black-text">
                             <label for="movie">Movie Title (Optional)</label>
                         </div>
 
                         <!-- Category Input Field - Select 1 Only-->
-                        <div class="input-field col s12 amber-text text-accent-4">
+                        <div class="input-field col s12 goldenhue">
                             <select name="category" id="category">
                                 <option value="Best Picture">Best Picture</option>
                                 <option value="Actor — Leading Role">Actor — Leading Role</option>
@@ -53,14 +53,14 @@
                             <label>Academy Award Category (Required)</label>
                         </div>
                         <!-- Year Select Field -Requires script below -->
-                        <div class="input-field col s12 amber-text text-accent-4">
+                        <div class="input-field col s12 goldenhue">
                             <select name="year" id="year">
                             </select>
                             <label>Year (Required)</label>
                         </div>
                         <div class="col s12">
                             <p>
-                                <input name="winners" type="checkbox" id="winners" />
+                                <input name="winners" type="checkbox" id="winners" class="checkbox-red" />
                                 <label for="winners">Show Oscar Winners Only</label>
                             </p>
                         </div>

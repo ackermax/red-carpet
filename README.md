@@ -28,11 +28,11 @@ This app has been deployed to Heroku and can be used by following the link below
 
 ## Screenshots of this Project
 
-![Red Carpet Splash Page](https://raw.github.com/ackermax/Red_Carpet/master/screenshots/screenshot1.gif "Red Carpet Splash Page")
+![Red Carpet Splash Page](https://raw.github.com/ackermax/red-carpet/master/screenshots/screenshot1.gif "Red Carpet Splash Page")
 
-![Red Carpet Search Page](https://raw.github.com/ackermax/Red_Carpet/master/screenshots/screenshot2.png "Red Carpet Search Page")
+![Red Carpet Search Page](https://raw.github.com/ackermax/red-carpet/master/screenshots/screenshot2.png "Red Carpet Search Page")
 
-![Red Carpet Queue Page](https://raw.github.com/ackermax/Red_Carpet/master/screenshots/screenshot3.png "Red Carpet Queue Page")
+![Red Carpet Queue Page](https://raw.github.com/ackermax/red-carpet/master/screenshots/screenshot3.png "Red Carpet Queue Page")
 
 ## API
 

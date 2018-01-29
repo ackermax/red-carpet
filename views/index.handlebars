@@ -17,19 +17,14 @@
                 <!-- Movie Title Input Field-->
                 <div class="row">
                     <form class="col s12">
-                        <div class="input-field col s12">
-                            <input id="movie" type="text" class="validate black-text">
-                            <label for="movie">Movie Title (Optional)</label>
-                        </div>
-
                         <!-- Category Input Field - Select 1 Only-->
                         <div class="input-field col s12 goldenhue">
                             <select name="category" id="category">
                                 <option value="Best Picture">Best Picture</option>
-                                <option value="Actor — Leading Role">Actor — Leading Role</option>
-                                <option value="Actor — Supporting Role">Actor — Supporting Role</option>
-                                <option value="Actress — Leading Role">Actress — Leading Role</option>
-                                <option value="Actress — Supporting Role">Actress — Supporting Role</option>
+                                <option value="Actor -- Leading Role">Actor — Leading Role</option>
+                                <option value="Actor -- Supporting Role">Actor — Supporting Role</option>
+                                <option value="Actress -- Leading Role">Actress — Leading Role</option>
+                                <option value="Actress -- Supporting Role">Actress — Supporting Role</option>
                                 <option value="Animated Feature Film">Animated Feature Film</option>
                                 <option value="Art Direction">Art Direction</option>
                                 <option value="Cinematography">Cinematography</option>
@@ -50,13 +45,17 @@
                                 <option value="Writing">Writing</option>
                             </select>
 
-                            <label>Academy Award Category (Required)</label>
+                            <label>Academy Award Category</label>
                         </div>
                         <!-- Year Select Field -Requires script below -->
                         <div class="input-field col s12 goldenhue">
                             <select name="year" id="year">
                             </select>
-                            <label>Year (Required)</label>
+                            <label>Year</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="movie" type="text" class="validate black-text">
+                            <label for="movie">Movie Title (Optional)</label>
                         </div>
                         <div class="col s12">
                             <p>
@@ -66,7 +65,7 @@
                         </div>
 
                         <!-- Submit Button with movie icon to left of text -->
-                        <a class="waves-effect waves-light btn-large red darken-4">
+                        <button type="submit" class="waves-effect waves-light btn-large red darken-4" id="search">
                             <i class="material-icons left">local_movies</i> Search</a>
                             <br>
                             <br>

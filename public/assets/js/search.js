@@ -57,15 +57,15 @@ function addYears() {
     for (var i = 90; i >= 1; i--) {
         var year = 1927 + i;
         switch (i) {
-            case 1:
+            case i.toString().split('').pop() == "1":
                 var suffix = "st";
                 break;
 
-            case 2:
+            case i.toString().split('').pop() == "2":
                 var suffix = "nd";
                 break;
 
-            case 3:
+            case i.toString().split('').pop() == "3":
                 var suffix = "rd";
                 break;
 

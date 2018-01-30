@@ -3,17 +3,15 @@
     <script type="text/javascript" src="assets/js/search.js"></script>
 
 
-    <div class="container" style="text-align:center">
+    <div class="container">
         <br>
-        <div class="row z-depth-3 grey lighten-3" id="rounded">
+        <div class="row z-depth-3 grey lighten-3 rounded" id="search-terms">
 
 
 
             <!-- Welcome logged in user personally to their queue -->
             <div class="col s12 m12">
-
-
-                <h3 class="red-text text-darken-4 brand-logo">Nominee Search</h3>
+                <h3 class="red-text text-darken-4 brand-logo" style="text-align:center">Nominee Search</h3>
                 <!-- Movie Title Input Field-->
                 <div class="row">
                     <form class="col s12">
@@ -21,10 +19,6 @@
                         <div class="input-field col s12 goldenhue">
                             <select name="category" id="category">
                                 <option value="Best Picture">Best Picture</option>
-                                <option value="Actor -- Leading Role">Actor — Leading Role</option>
-                                <option value="Actor -- Supporting Role">Actor — Supporting Role</option>
-                                <option value="Actress -- Leading Role">Actress — Leading Role</option>
-                                <option value="Actress -- Supporting Role">Actress — Supporting Role</option>
                                 <option value="Animated Feature Film">Animated Feature Film</option>
                                 <option value="Art Direction">Art Direction</option>
                                 <option value="Cinematography">Cinematography</option>
@@ -43,6 +37,10 @@
                                 <option value="Sound Editing">Sound Editing</option>
                                 <option value="Visual Effects">Visual Effects</option>
                                 <option value="Writing">Writing</option>
+                                <option disabled value="Actor -- Leading Role">Actor — Leading Role -- Coming Soon!</option>
+                                <option disabled value="Actor -- Supporting Role">Actor — Supporting Role -- Coming Soon!</option>
+                                <option disabled value="Actress -- Leading Role">Actress — Leading Role -- Coming Soon!</option>
+                                <option disabled value="Actress -- Supporting Role">Actress — Supporting Role -- Coming Soon!</option>
                             </select>
 
                             <label>Academy Award Category</label>
@@ -65,10 +63,11 @@
                         </div>
 
                         <!-- Submit Button with movie icon to left of text -->
-                        <button type="submit" class="waves-effect waves-light btn-large red darken-4" id="search">
-                            <i class="material-icons left">local_movies</i> Search</a>
-                            <br>
-                            <br>
+                        <div class="col s12" style="text-align:center">
+                            <button type="submit" class="waves-effect waves-light btn-large red darken-4" id="search">
+                                <i class="material-icons left">local_movies</i> Search</button>
+                        </div>
+         
                     </form>
                 </div>
 

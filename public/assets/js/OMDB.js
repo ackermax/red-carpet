@@ -6,22 +6,20 @@ var movie = "Alien";
 var actor = "";
 
 // Queries OMDB API for relevant movie data
-// $("#find-movie").on("click", function (event) {
+function getPoster() {
 
-//     event.preventDefault();
+    // Updated API to poster API only
+    var queryURL = "http://img.omdbapi.com/?apikey=trilogy&" + movie;
 
-// var movie = $("#movie-input").val();
-// // Updated API to poster API only
-// var queryURL = "http://img.omdbapi.com/?apikey=trilogy&" + movie;
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).done(function (response) {
+        console.log(queryURL);
+        console.log(response);
+    });
 
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-// }).done(function (response) {
-//     $("#movie-view").text(JSON.stringify(response));
-// });
-
-// });
+}
 
 var client = amazon.createClient({
     awsId: "AKIAJKPMV5NYCWHQ4PRA",
@@ -48,6 +46,7 @@ function getDVD() {
         console.log(err);
     });
 }
+
 
 // Search for Amazon Instant Video
 function getStreaming() {
@@ -83,4 +82,3 @@ function getSoundtrack() {
     });
 }
 
-getSoundtrack();

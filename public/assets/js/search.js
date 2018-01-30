@@ -56,23 +56,24 @@ function addYears() {
 
     for (var i = 90; i >= 1; i--) {
         var year = 1927 + i;
-        switch (i) {
-            case i.toString().split('').pop() == "1":
+        
+        switch (Number(i.toString().split('').pop())) {
+            case 1:
                 var suffix = "st";
                 break;
 
-            case i.toString().split('').pop() == "2":
+            case 2:
                 var suffix = "nd";
                 break;
 
-            case i.toString().split('').pop() == "3":
+            case 3:
                 var suffix = "rd";
                 break;
 
             default:
                 var suffix = "th";
         }
-
+        
         var yearString = "(" + i + suffix + ")";
         if (i <= 6) {
             switch (i) {

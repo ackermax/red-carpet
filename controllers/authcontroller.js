@@ -15,9 +15,9 @@ var exports = {
     logout: function (req, res) {
         req.session.destroy(function (err) {
             res.redirect("/");
-            console.log("logged out!");
         });
     }
+   
 };
 
 module.exports = exports;

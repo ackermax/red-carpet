@@ -123,11 +123,11 @@ module.exports = function (passport, user) {
 
             }).catch(function (err) {
 
-
+                return done(null, false, { message: "Something went wrong with your Signin" });
             });
 
         }
-                      return done(null, false, { message: "Something went wrong with your Signin" });
+
 
     ));
 

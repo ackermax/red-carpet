@@ -1,3 +1,10 @@
+    // Code to bypass splash page on mobile devices
+    if (screen.width <= 699) {
+        location.href = "/search";
+        // document.location = "http://mobilesite.com";
+    }
+    
+// Code to control spotlight on splash page
 $('.searchlight')
     .on('mousemove', function (event) {
         $(this).addClass('on').css({ 'margin-left': event.pageX - 150, 'margin-top': event.pageY - 150 });

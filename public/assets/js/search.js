@@ -50,7 +50,7 @@ function getPoster(nominee, addinfo, id, tmdbQuery, resultsRow, won) {
 
         var poster = "http://image.tmdb.org/t/p/w154" + moviedb.results[0].poster_path;
         var newResult = $("<div>").attr("class", "row deep-purple lighten-3 z-depth-2")
-            .html('<img src="' + poster + '" align="right"><h3 style="padding-top:1%;margin-left: 1%; color: white;">' + nominee + '</h3><h5 style="margin-left: 1%; color:rgb(61, 61, 61);">' + addinfo + '</h5><br><br><br><a class="btn waves-effect waves-light red darken-4" style="margin-left: 1%;" data-id=' + id + '>Add to Watchlist</a>')
+            .html('<img src="' + poster + '" align="right" class="responsive-img"><h3 style="padding-top:1%;margin-left: 1%; color: white;">' + nominee + '</h3><h5 style="margin-left: 1%; color:rgb(61, 61, 61);">' + addinfo + '</h5><br><br><br><a class="btn waves-effect waves-light red darken-4" style="margin-left: 1%;" data-id=' + id + '>Add to Watchlist</a>')
             .appendTo(resultsRow);
             if (won === "YES") {
                 $(newResult).removeClass("deep-purple lighten-3").addClass("amber");

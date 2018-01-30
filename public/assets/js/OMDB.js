@@ -2,8 +2,8 @@ var amazon = require('amazon-product-api');
 var chalk = require('chalk');
 
 // Variable for User's movie
-var movie = "Oblivion";
-var actor = "Tom Cruise";
+var movie = "Alien";
+var actor = "";
 
 // Queries OMDB API for relevant movie data
 // $("#find-movie").on("click", function (event) {
@@ -83,4 +83,4 @@ function getSoundtrack() {
     });
 }
 
-getStreaming();
+getSoundtrack();

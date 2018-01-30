@@ -33,6 +33,36 @@ module.exports = function (app) {
     });
   });
 
+  app.post("/api/usermovies", function (req, res) {
+    var query = {
+      movieid: req.body.movieid,
+      useremail: req.user.email,
+      poster: req.body.poster,
+      UserId: req.user.id,
+      nominee: req.body.nominee,
+      category: req.body.category,
+      addinfo: req.body.addinfo,
+      won: req.body.won
+    }
+    db.UserMovie.findOne({
+      where: {
+        useremail: query.useremail,
+        movieid: query.movieid
+      }
+    }).then(function (answer) {
+      console.log(answer);
+      if (answer == null) {
+        db.UserMovie.create(query).then(function (dbUserMovie) {
+          res.status(200);
+        });
+      }
+      else {
+        res.status(400);
+      }
+    });
+
+  });
+
 
   //   // Get rotue for retrieving a single Movie
   //   app.get("/api/Movies/:id", function(req, res) {

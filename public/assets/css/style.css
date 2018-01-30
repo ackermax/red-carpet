@@ -122,3 +122,9 @@
       font-size: 1.5em !important;
     }
 }
+
+#no-saved-movies {
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}

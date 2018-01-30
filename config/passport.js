@@ -53,6 +53,7 @@ module.exports = function (passport, user) {
                             lastname: req.body.lastname
                         };
 
+
                     User.create(data).then(function (newUser, created) {
                         if (!newUser) {
                             return done(null, false);
@@ -60,17 +61,29 @@ module.exports = function (passport, user) {
 
                         if (newUser) {
                             return done(null, newUser);
+
+
                         }
+
+
                     });
                 }
+
+
             });
+
+
+
         }
+
+
     ));
 
     //LOCAL SIGNIN
     passport.use("local-signin", new LocalStrategy(
 
         {
+
             // by default, local strategy uses username and password, we will override with email
             usernameField: "email",
             passwordField: "password",
@@ -92,7 +105,9 @@ module.exports = function (passport, user) {
                 }
 
                 if (!isValidPassword(user.password, password)) {
+
                     return done(null, false, { message: "Incorrect password." });
+
                 }
 
                 var userinfo = user.get();
@@ -104,7 +119,17 @@ module.exports = function (passport, user) {
                 console.log("Error:", err);
 
                 return done(null, false, { message: "Something went wrong with your Signin" });
+
+
+            }).catch(function (err) {
+
+
             });
+
         }
+                      return done(null, false, { message: "Something went wrong with your Signin" });
+
     ));
-}
+
+};
+

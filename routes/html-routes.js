@@ -25,13 +25,13 @@ module.exports = function (app) {
     res.render("profile");
   });
 
-  app.get("/signin", function (req, res) {
-    res.render("signin");
-  });
+  // app.get("/signin", function (req, res) {
+  //   res.render("signin");
+  // });
 
-  app.get("/signup", function(req, res){
-    res.render("signup");
-  });
+  // app.get("/signup", function(req, res){
+  //   res.render("signup");
+  // });
 
   // queue route loads watchlist
   app.get("/watchlist", function (req, res) {

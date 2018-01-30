@@ -11,7 +11,6 @@ module.exports = function (passport, user) {
         done(null, user.id);
     });
 
-
     // used to deserialize the user
     passport.deserializeUser(function (id, done) {
         User.findById(id).then(function (user) {
@@ -22,9 +21,7 @@ module.exports = function (passport, user) {
                 done(user.errors, null);
             }
         });
-
     });
-
 
     passport.use("local-signup", new LocalStrategy(
 
@@ -35,7 +32,6 @@ module.exports = function (passport, user) {
         },
 
         function (req, email, password, done) {
-
 
             var generateHash = function (password) {
                 return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
@@ -66,6 +62,7 @@ module.exports = function (passport, user) {
                         if (newUser) {
                             return done(null, newUser);
 
+
                         }
 
 
@@ -78,7 +75,6 @@ module.exports = function (passport, user) {
 
 
         }
-
 
 
     ));
@@ -125,9 +121,15 @@ module.exports = function (passport, user) {
                 return done(null, false, { message: "Something went wrong with your Signin" });
 
 
+            }).catch(function (err) {
+
+
             });
 
         }
+                      return done(null, false, { message: "Something went wrong with your Signin" });
+
     ));
 
 };
+

@@ -59,8 +59,12 @@
     transform-origin: 100% 100%;
   }
 
-  p label {
+  p label{
     color: black;
+  }
+  
+  .text {
+    color: white;
   }
   
   .rounded {

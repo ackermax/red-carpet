@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $('select').material_select();
     $('.datepicker').pickadate({
         selectYears: 90, // Creates a dropdown of 15 years to control year       

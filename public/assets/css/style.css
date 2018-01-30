@@ -59,11 +59,11 @@
     transform-origin: 100% 100%;
   }
 
-  p {
+  p label{
     color: black;
   }
   
-  label {
+  .text {
     color: white;
   }
   

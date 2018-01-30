@@ -1,26 +1,15 @@
 <main>
-    <!-- This View will require formatting once we have data flowing in. I've begun coding 2 diffeeret ways to display results. Once data is flowing we can decide which is best or take an entirely new approach -->
+    <!-- This View will require formatting once we have data flowing in. -->
 
     <!-- Define left-aligned container -->
     <div class="container" style="text-align:left">
-        <div class="row">
-            <!-- Welcome logged in user personally to their queue -->
-            <h1>{{user.name}}'s&nbsp;Queue</h1>
+        <div class="row-queue">
 
-            <!-- Box to hold movie poster (requires script below to display movie poster dynamically) -->
-            <img class="materialboxed" width="550" src="images/#.jpg">
-
-            <!-- Close row -->
-        </div>
-
-        <div class="row-results">
-
-            <div class="col s12 m7">
-                <h2 class="header">Horizontal Card</h2>
-                <div class="card horizontal medium">
-                    <div class="card-image">
-                        <img src={{movie_poster}}>
-                    </div>
+            <div class="col s12 m12">
+                <!-- Display users name at top of card -->
+                <h4 class="header">{{user.name}}'s&nbsp;Queue</h4>
+                <div class="card horizontal medium #ef5350 red lighten-1">
+                    
                     <div class="card-stacked">
                         <div class="card-content">
                             <p>{{Title}}
@@ -28,8 +17,19 @@
                                 <br> {{synopsis}}
                             </p>
                         </div>
-                        <div class="card-action">
-                            <a href="#">Link - Where to Watch</a>
+
+                        <!-- Displays Movie Poster on Right Side of Card -->
+                        <div class="card-image" "right">
+                            <img src={{movie_poster}}>
+                        </div>
+
+                        <!-- Actions at bottom of card -->
+                        <div class="card-action-rate" "center-align">
+                            <!-- Star Rating System Goes Here -->
+                            <a href="#">Watched it? Rate it!</a>
+
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Where to Watch</a>
                         </div>
                     </div>
                 </div>
@@ -41,24 +41,25 @@
         <!-- Close container -->
     </div>
 
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Dismiss</a>
+        </div>
+    </div>
+
 </main>
 
-    <!-- JS to display movie poster dynamically (materialboxed) -->
-    <script>
-        $(document).ready(function () {
-            $('.materialboxed').materialbox();
+
+<!-- JS to display Modal -->
+<script>
+    $(document).ready(function () {
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
         });
-    </script>
+</script>
 
-
-
-
-
-
-
-
-
-
-
-
-</main>

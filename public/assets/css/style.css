@@ -91,6 +91,13 @@
     position: relative;
 }
 
+.card.horizontal {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+
   /* Media Queries */
 
 @media screen and (max-width:980px) {  

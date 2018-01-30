@@ -1,19 +1,28 @@
 <h2>Sign in to Red Carpet</h2>
 
-<div class="row">
-    <form class="col s12" id="signin" name="signin" method="post" action="signin">
-        <div class="row">
-            <div class="input-field col s12">
-                <label for="email">Email Address</label>
-                <input class="text" name="email" type="text" />
+<main>
+
+    <div class="container">
+        <br>
+        <div class="row z-depth-3 grey lighten-3 rounded" id="search-terms">
+
+
+            <div class="row">
+                <form class="col s12" id="signin" name="signin" method="post" action="signin">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="email">Email Address</label>
+                            <input class="text" name="email" type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="password">Password</label>
+                            <input name="password" type="password" />
+                        </div>
+                    </div>
+                    <input class="btn" type="submit" value="Sign In" />
+                </form>
             </div>
-        </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <label for="password">Password</label>
-                <input name="password" type="password" />
-            </div>
-        </div>
-        <input class="btn" type="submit" value="Sign In" />
-    </form>
-</div>
+    {{!-- close container --}}
+</main>

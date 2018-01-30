@@ -105,9 +105,9 @@
 @media (max-width: 768px) {  
 }
 
-/* Adjust size of title on smaller screens to preserve rainbow effect */
+/* Adjust size of title on smaller screens  */
 @media (max-width: 640px) {
     .brand-logo {
-      font-size: 1.3em;
+      font-size: 1.5em !important;
     }
 }

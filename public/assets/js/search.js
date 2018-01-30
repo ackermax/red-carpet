@@ -12,8 +12,9 @@ $(document).ready(function () {
 
     $("#search").click(function (e) {
         e.preventDefault();
+        $("#results-dump").empty();
         // console.log("click!");
-        // $(this).attr("disabled", "");
+        $(this).attr("disabled", "");
         var query = {};
         if ($("#movie").val().trim()) {
             query.nominee = $("#movie").val().trim();
@@ -27,7 +28,7 @@ $(document).ready(function () {
 
         $.post("/api/movies", query, function (data) {
             var resultsRow = $("<div>")
-                .attr({ "class": "row z-depth-3 grey lighten-3 rounded", "style": "padding: 20px;" }).insertAfter("#search-terms");
+                .attr({ "class": "row z-depth-3 grey lighten-3 rounded", "style": "padding: 20px;" }).appendTo("#results-dump");
             var movies = data;
 
             console.log(movies);
@@ -35,21 +36,26 @@ $(document).ready(function () {
                 var nominee = movies[i].nominee;
                 var addinfo = movies[i].addinfo;
                 var id = movies[i].id;
+                var won = movies[i].won;
                 var tmdbQuery = "https://api.themoviedb.org/3/search/movie?api_key=46ad7326858ee4a152920a2448ba8382&query=" + movies[i].nominee + "&page=1&include_adult=false";
-                getPoster(nominee, addinfo, id, tmdbQuery, resultsRow);
+                getPoster(nominee, addinfo, id, tmdbQuery, resultsRow, won);
                 
             }
         });
+        $(this).removeAttr("disabled");
     });
 });
 
-function getPoster(nominee, addinfo, id, tmdbQuery, resultsRow) {
+function getPoster(nominee, addinfo, id, tmdbQuery, resultsRow, won) {
     $.get(tmdbQuery, function (moviedb) {
 
         var poster = "http://image.tmdb.org/t/p/w154" + moviedb.results[0].poster_path;
-        var newResult = $("<div>").attr("class", "row amber darken-4 z-depth-2")
-            .html('<img src="' + poster + '" align="right"><h3 style="padding-top:1%;margin-left: 1%; color: white;">' + nominee + '</h3><h5 style="margin-left: 1%; color:rgb(61, 61, 61);">' + addinfo + '</h5><br><br><br><a class="btn waves-effect waves-light red darken-4" style="margin-left: 1%;" data-id=' + id + '>Add to Watchlist</a>')
+        var newResult = $("<div>").attr("class", "row deep-purple lighten-3 z-depth-2")
+            .html('<img src="' + poster + '" align="right" class="responsive-img"><h3 style="padding-top:1%;margin-left: 1%; color: white;">' + nominee + '</h3><h5 style="margin-left: 1%; color:rgb(61, 61, 61);">' + addinfo + '</h5><br><br><br><a class="btn waves-effect waves-light red darken-4" style="margin-left: 1%;" data-id=' + id + '>Add to Watchlist</a>')
             .appendTo(resultsRow);
+            if (won === "YES") {
+                $(newResult).removeClass("deep-purple lighten-3").addClass("amber");
+            }
     });
 };
 

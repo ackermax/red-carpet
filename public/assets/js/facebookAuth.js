@@ -3,8 +3,6 @@ var express = require('express');
 var app = express();
 FacebookStrategy = require('passport-facebook').Strategy;
 
-
-
 passport.use(new FacebookStrategy({
     clientID: '200128317237444',
     clientSecret: '3d895bd6670de041c00caf502ab7c798',

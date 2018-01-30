@@ -63,11 +63,29 @@
     color: black;
   }
   
-  #rounded {
+  .rounded {
     border-radius: 5px;
   }
 
   .goldenhue{
     color: #b99435;
   }
-  
+  .brand-red {
+    color: #b71c1c;
+  }
+
+  .divider {
+    border-color: #b71c1c;
+  }
+
+  .poster {
+    display: inline-block;
+  }
+
+  .bottom {
+    position: absolute;
+    top: 80%;
+  }
+  .relative {
+    position: relative;
+  }

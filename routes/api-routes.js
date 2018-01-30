@@ -29,7 +29,6 @@ module.exports = function (app) {
     db.Movie.findAll({
       where: query
     }).then(function (dbMovie) {
-      console.log(dbMovie);
       res.json(dbMovie);
     });
   });

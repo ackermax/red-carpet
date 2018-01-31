@@ -18,7 +18,7 @@
 
 ## Concept
 
->Create and manage your own personal list of award winning (and nominated films), with reviews, a watched list, and priority lists based on when which awards shows are coming up next. Red Carpet is the perfect tool for your elitist movie-watching needs!
+>Create and manage your own personal list of award winning (and nominated films), with reviews, a watched list, and priority lists based on which awards shows are coming up next. Red Carpet is the perfect tool for your elitist movie-watching needs!
 
 ## Deployment
 
@@ -38,18 +38,6 @@ This app has been deployed to Heroku and can be used by following the link below
 
 OMDB API can provide awards information
 
-## Needs
-
-Aesthetics - Steve…
-Mobile Responsiveness
-Proper documentation
-Make sure every push has content and context.
-MySQL Database
-
-### Nice to Haves
-
-Award show notifications
-
 ## Database
 
 ```
@@ -67,6 +55,7 @@ Award show notifications
 	        * Movie_ID
 	        * Rating
 	        * Watched
+			* Poster HREF
 
 	* MovieData
         * Columns
@@ -75,9 +64,7 @@ Award show notifications
 	        * Category
 			* Nominee/Movie
 			* AddInfo
-			* Won
-			* Poster HREF
-			* IMDB HREF
+			* Won			
 ```
 
 ## Technologies
@@ -93,14 +80,7 @@ Award show notifications
 
 ### New Technology
 
-Passport - Jason
-
-### Buzzwords
-
-Time Management??? - Movie tickets… Streaming Options
-Automation???
-Parenting - Content (Nice to Have)
-Music - Soundtracks (Nice to Have)
+Passport - Jason & Max
 
 ## Authors
 
@@ -110,9 +90,5 @@ Music - Soundtracks (Nice to Have)
 + Steve **W**alker https://github.com/captnwalker
 + Jason **A**pfel https://github.com/jasapper
   - *Team Lead: Max*
-
-## License
-
-????
 
 ![Filmocat](https://octodex.github.com/images/filmtocat.png)

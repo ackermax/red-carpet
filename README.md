@@ -37,28 +37,29 @@ This app has been deployed to Heroku and can be used by following the link below
 ## Database Structure
 
 ```
-* Table
+* Tables
 	* Users
 		* Columns
 			* User_ID
 			* FName
 			* LName
 			* Username/Email
+
 	* UserData
-        * Columns
+			* Columns
 			* User_ID
-	        * Movie_ID
-	        * Rating
-	        * Watched
+			* Movie_ID
+			 * Rating
+			 * Watched
 			* Poster HREF
 	* MovieData
-        * Columns
-	        * Movie_ID
-	        * Year
-	        * Category
+		* Columns
+			* Movie_ID
+			* Year
+			* Category
 			* Nominee/Movie
 			* AddInfo
-			* Won			
+			* Won
 ```
 
 ## Technologies

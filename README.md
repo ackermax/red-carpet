@@ -52,7 +52,6 @@ This app has been deployed to Heroku and can be used by following the link below
 			 * Rating
 			 * Watched
 			* Poster HREF
-
 	* MovieData
 		* Columns
 			* Movie_ID

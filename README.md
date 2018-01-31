@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Red-Carpet](#red-carpet-clapper-moviecamera)
 	- [Concept](#concept)
 	- [Deployment](#deployment)
 	- [Screenshots of this Project](#screenshots-of-this-project)
@@ -14,7 +15,7 @@
 
 >Create and manage your own personal list of award winning (and nominated films), with reviews, a watched list, and priority lists based on which awards shows are coming up next. Red Carpet is the perfect tool for your elitist movie-watching needs!
 
-## Deployment- [Red-Carpet :clapper: :movie_camera:](#red-carpet-clapper-moviecamera)
+## Deployment
 
 This app has been deployed to Heroku and can be used by following the link below:
 
@@ -28,14 +29,12 @@ This app has been deployed to Heroku and can be used by following the link below
 
 ![Red Carpet Queue Page](https://raw.github.com/ackermax/red-carpet/master/screenshots/screenshot3.png "Red Carpet Queue Page")
 
-
 ## API's
 
 * TMDB.org
 * Amazon
 
 ## Database Structure
-
 
 ```
 * Table
@@ -77,7 +76,6 @@ This app has been deployed to Heroku and can be used by following the link below
 * dotenv - https://www.npmjs.com/package/dotenv
 * handlebars-helpers - https://www.npmjs.com/package/handlebars-helpers
 * passport - https://www.npmjs.com/package/passport
-
 
 ## Authors
 

@@ -26,9 +26,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s6">
                                 <label for="password">Password</label>
-                                <input class="validate black-text" name="password" type="password" />
+                                <input class="validate black-text" id="password" name="password" type="password" />
+                            </div>
+                            <div class="input-field col s6">
+                                <label for="password2">Verify Password</label>
+                                <input class="validate black-text" id="confirmPassword" name="confirmPassword" type="password" />
                             </div>
                         </div>
                         <div class="col s12" style="text-align:center">
@@ -40,4 +44,17 @@
             </div>
         </div>
     </div>
+     <script>
+        $(function () {
+            $("#sign_up").click(function () {
+                var password = $("#password").val();
+                var confirmPassword = $("#confirmPassword").val();
+                if (password != confirmPassword) {
+                    alert("Passwords do not match!");
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
 </main>

@@ -11,7 +11,7 @@
                 <h3 class="header brand-red brand-logo">{{name}}'s&nbsp;Queue</h3>
                 <div class="divider"></div>
                 <br> {{#if UserMovie}}
-                <h4 class="brand-red brand-logo">Not Watched</h4>
+                <h4 class="brand-red brand-logo" id="watch">Not Watched</h4>
                 {{#each UserMovie}}{{#unless dataValues.watched}} {{#if dataValues.won}}
                 <div class="card horizontal amber z-depth-2">
                     {{else}}
@@ -40,7 +40,7 @@
 
                     </div>
                     {{/unless}} {{/each}}
-                    <h4 class="brand-red brand-logo">Watched</h4>
+                    <h4 class="brand-red brand-logo" id="watch">Watched</h4>
                     {{#each UserMovie}}{{#if dataValues.watched}} {{#if dataValues.won}}
                     <div class="card horizontal amber z-depth-2">
                         {{else}}

@@ -20,6 +20,10 @@
       padding-left: 20px;
       padding-right: 20px;
   }
+
+  #watch {
+    font-family: 'Raleway', sans-serif;;
+  }
       
   .page-footer {
     padding-top: 0;

@@ -3,10 +3,33 @@
 
 // Requiring our models
 var db = require("../models");
-
+var amazon = require('amazon-product-api');
 // Routes
 // =============================================================
 module.exports = function (app) {
+  app.post("/api/amazon", function (req, res) {
+    var client = amazon.createClient({
+      awsId: "AKIAJKPMV5NYCWHQ4PRA",
+      awsSecret: "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",
+      awsTag: "FenixRising13"
+    });
+
+    var movie = req.body.movie
+
+    client.itemSearch({
+      title: movie,
+      searchIndex: 'DVD',
+      MerchantId: 'Amazon',
+      responseGroup: 'ItemAttributes'
+    }).then(function (results) {
+      var response = results[0].DetailPageURL[0];
+      res.json(response);
+
+    }).catch(function (err) {
+      console.log(err);
+    });
+  });
+
   app.put("/api/usermovies/update", function (req, res) {
     db.UserMovie.update(req.body, {
       where: {
@@ -24,9 +47,9 @@ module.exports = function (app) {
         id: req.params.id
       }
     })
-    .then(function(dbUserMovie){
-      res.json(dbUserMovie);
-    });
+      .then(function (dbUserMovie) {
+        res.json(dbUserMovie);
+      });
   });
 
   // GET route for getting all of the Movies
@@ -83,49 +106,4 @@ module.exports = function (app) {
     });
 
   });
-
-
-  //   // Get rotue for retrieving a single Movie
-  //   app.get("/api/Movies/:id", function(req, res) {
-  //     // 2. Add a join here to include the Author who wrote the Movie
-  //     db.Movie.findOne({
-  //       where: {
-  //         id: req.params.id
-  //       }
-  //     }).then(function(dbMovie) {
-  //       console.log(dbMovie);
-  //       res.json(dbMovie);
-  //     });
-  //   });
-
-  //   // Movie route for saving a new Movie
-  //   app.Movie("/api/Movies", function(req, res) {
-  //     db.Movie.create(req.body).then(function(dbMovie) {
-  //       res.json(dbMovie);
-  //     });
-  //   });
-
-  //   // DELETE route for deleting Movies
-  //   app.delete("/api/Movies/:id", function(req, res) {
-  //     db.Movie.destroy({
-  //       where: {
-  //         id: req.params.id
-  //       }
-  //     }).then(function(dbMovie) {
-  //       res.json(dbMovie);
-  //     });
-  //   });
-
-  //   // PUT route for updating Movies
-  //   app.put("/api/Movies", function(req, res) {
-  //     db.Movie.update(
-  //       req.body,
-  //       {
-  //         where: {
-  //           id: req.body.id
-  //         }
-  //       }).then(function(dbMovie) {
-  //         res.json(dbMovie);
-  //       });
-  //   });
 };

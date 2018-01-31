@@ -24,8 +24,6 @@ app.use(bodyParser.json());
 
 app.use(express.static("public"));
 
-
-
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 var authRoute = require("./routes/auth-routes.js")(app, passport);

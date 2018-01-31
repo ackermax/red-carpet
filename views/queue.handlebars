@@ -1,6 +1,7 @@
 <main>
     <!-- This View will require formatting once we have data flowing in. -->
     <script type="text/javascript" src="assets/js/queue.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!-- Define left-aligned container -->
     <div class="container" style="text-align:left">
         <br>
@@ -34,7 +35,7 @@
                                 <a href="#" class="waves-effect waves-light btn watched-button left red darken-4" data-id={{dataValues.id}}>Rate or Delete</a>
 
                                 <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light btn modal-trigger right orange" href="#modal1">Where to Watch</a>
+                                <a class="waves-effect waves-light btn right orange where-watch" nominee="{{dataValues.nominee}}" href="#">Where to Watch</a>
                             </div>
                         </div>
 
@@ -80,7 +81,7 @@
                                         <i class="material-icons">star</i>{{/is}}</a>
 
                                     <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light btn modal-trigger right orange" href="#modal1">Where to Watch</a>
+                                    <a class="waves-effect waves-light btn right orange where-watch" nominee="{{dataValues.nominee}}" href="#">Where to Watch</a>
                                 </div>
                             </div>
 

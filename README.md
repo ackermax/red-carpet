@@ -12,7 +12,7 @@
 
 ## Concept
 
->Create and manage your own personal list of award winning (and nominated films), with reviews, a watched list, and priority lists based on when which awards shows are coming up next. Red Carpet is the perfect tool for your elitist movie-watching needs!
+>Create and manage your own personal list of award winning (and nominated films), with reviews, a watched list, and priority lists based on which awards shows are coming up next. Red Carpet is the perfect tool for your elitist movie-watching needs!
 
 ## Deployment- [Red-Carpet :clapper: :movie_camera:](#red-carpet-clapper-moviecamera)
 
@@ -28,12 +28,14 @@ This app has been deployed to Heroku and can be used by following the link below
 
 ![Red Carpet Queue Page](https://raw.github.com/ackermax/red-carpet/master/screenshots/screenshot3.png "Red Carpet Queue Page")
 
+
 ## API's
 
 * TMDB.org
 * Amazon
 
 ## Database Structure
+
 
 ```
 * Table
@@ -50,6 +52,7 @@ This app has been deployed to Heroku and can be used by following the link below
 	        * Movie_ID
 	        * Rating
 	        * Watched
+			* Poster HREF
 
 	* MovieData
         * Columns
@@ -58,9 +61,7 @@ This app has been deployed to Heroku and can be used by following the link below
 	        * Category
 			* Nominee/Movie
 			* AddInfo
-			* Won
-			* Poster HREF
-			* IMDB HREF
+			* Won			
 ```
 
 ## Technologies
@@ -76,6 +77,7 @@ This app has been deployed to Heroku and can be used by following the link below
 * dotenv - https://www.npmjs.com/package/dotenv
 * handlebars-helpers - https://www.npmjs.com/package/handlebars-helpers
 * passport - https://www.npmjs.com/package/passport
+
 
 ## Authors
 

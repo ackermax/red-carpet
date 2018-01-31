@@ -2,14 +2,14 @@ var amazon = require('amazon-product-api');
 var chalk = require('chalk');
 
 // Variable for User's movie
-var movie = "Alien";
+var movie = "The Artist";
 var actor = "";
 
 // Queries OMDB API for relevant movie data
 function getPoster() {
 
     // Updated API to poster API only
-    var queryURL = "http://img.omdbapi.com/?apikey=trilogy&" + movie;
+    var queryURL = "http://www.omdbapi.com/?apikey=trilogy&plot=short&" + movie;
 
     $.ajax({
         url: queryURL,
@@ -33,20 +33,16 @@ function getDVD() {
         title: movie,
         actor: actor,
         searchIndex: 'DVD',
-        sort: 'price',
         MerchantId: 'Amazon',
         responseGroup: 'ItemAttributes,Offers,Images'
     }).then(function (results) {
+        var response = results[0].DetailPageURL[0];
+        return response;
 
-        for (var i = 0; i < results.length; i++) {
-            console.log(chalk.red('These are the DVD results'));
-            console.log(results[i]);
-        }
     }).catch(function (err) {
         console.log(err);
     });
 }
-
 
 // Search for Amazon Instant Video
 function getStreaming() {
@@ -58,7 +54,7 @@ function getStreaming() {
     }).then(function (results) {
         for (var i = 0; i < results.length; i++) {
             console.log(chalk.red('These are the Amazon Instant Video results'));
-            console.log(results[i]);
+            console.log(results[0]);
         }
     }).catch(function (err) {
         console.log(err);
@@ -75,10 +71,14 @@ function getSoundtrack() {
     }).then(function (results) {
         for (var i = 0; i < results.length; i++) {
             console.log(chalk.red('These are the Soundtrack results'));
-            console.log(results[i]);
+            console.log(results[0]);
         }
     }).catch(function (err) {
         console.log(err);
     });
 }
 
+// getPoster();
+getDVD();
+// getStreaming();
+// getSoundtrack();

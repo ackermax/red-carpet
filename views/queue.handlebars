@@ -25,7 +25,7 @@
                             <div class="card-content">
                                 <h5>{{dataValues.nominee}} - ({{dataValues.category}})</h5>
                                 <h6>{{dataValues.addinfo}}</h6>
-
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             </div>
 
                             <!-- Actions at bottom of card -->
@@ -54,7 +54,9 @@
                                 <div class="card-content">
                                     <h5>{{dataValues.nominee}} - ({{dataValues.category}})</h5>
                                     <h6>{{dataValues.addinfo}}</h6>
-
+                                    <a href="https://twitter.com/intent/tweet?&ref_src=twsrc%5Etfw" class="twitter-hashtag-button align-right" data-size="large"
+                                        data-text="I just rated {{dataValues.category}}{{#if dataValues.won}} winner {{else}} nominee {{/if}}{{dataValues.nominee}} {{dataValues.rating}} stars on @TheRedCarpetApp. What did you think of the film?"
+                                        data-related="TheRedCarpetApp" data-show-count="false">Tweet #tweet</a>
                                 </div>
 
                                 <!-- Actions at bottom of card -->

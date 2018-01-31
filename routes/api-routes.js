@@ -13,6 +13,17 @@ module.exports = function (app) {
         id: req.body.id
       }
     })
+      .then(function (dbUserMovie) {
+        res.json(dbUserMovie);
+      });
+  });
+
+  app.delete("/api/usermovies/delete/:id", function (req, res) {
+    db.UserMovie.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
     .then(function(dbUserMovie){
       res.json(dbUserMovie);
     });

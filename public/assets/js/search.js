@@ -77,11 +77,11 @@ function getPoster(nominee, addinfo, id, tmdbQuery, resultsRow, won, category) {
     $.get(tmdbQuery, function (moviedb) {
 
         var poster = "http://image.tmdb.org/t/p/w154" + moviedb.results[0].poster_path;
-        var newResult = $("<div>").attr("class", "row deep-purple lighten-3 z-depth-2")
-            .html('<img src="' + poster + '" align="right" class="responsive-img" id="posterid-' + id + '"><h3 style="padding-top:1%;margin-left: 1%; color: white;">' + nominee + '</h3><h5 style="margin-left: 1%; color:rgb(61, 61, 61);">' + addinfo + '</h5><br><br><br><a class="btn waves-effect waves-light red darken-4 user-movie-add" style="margin-left: 1%;" data-id=' + id + ' data-nominee="'+nominee+'" data-category="'+category+'" data-addinfo="'+addinfo+'" data-won="'+won+'">Add to Watchlist</a>')
+        var newResult = $("<div>").attr("class", "card horizontal deep-purple z-depth-2")
+            .html('<div class="card-image"><img src="' + poster + '" id="posterid-' + id + '"></div><div class="card-stacked"><div class="card-content"><h4 style="color: white;">' + nominee + '</h4><h5 style="color: white;">' + addinfo + '</h5></div><div class="card-action"><a class="btn waves-effect waves-light red darken-4 user-movie-add" style="margin-left: 1%;" data-id=' + id + ' data-nominee="'+nominee+'" data-category="'+category+'" data-addinfo="'+addinfo+'" data-won="'+won+'">Add to Watchlist</a></div></div>')
             .appendTo(resultsRow);
         if (won === "YES") {
-            $(newResult).removeClass("deep-purple lighten-3").addClass("amber");
+            $(newResult).removeClass("deep-purple").addClass("amber");
         }
     });
 };

@@ -2,6 +2,20 @@ $(document).ready(function () {
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
 
+    $(document).on("click", ".where-watch", function (e) {
+        e.preventDefault();
+        console.log('click');
+        var movie = $(this).attr("nominee");
+        var query = {
+            movie: movie
+        };
+        $.post("/api/amazon", query, function(data){
+            $("#modal-fill").empty();
+            $("#modal-fill").html('<h4 id="watch" class="brand-red">Buy on Amazon</h4><br><a class="waves-effect waves-light btn center orange" href="' + data + '" target="_blank">'+ movie + '</a>');
+            $("#modal1").modal("open");
+        });
+    });
+
     $(".watched-button").click(function (e) {
         e.preventDefault();
         var id = $(this).attr("data-id");
@@ -36,8 +50,8 @@ $(document).ready(function () {
             method: "DELETE",
             url: "/api/usermovies/delete/" + id
         })
-        .then(function(){
-            window.location.href = "/profile";
-        })
+            .then(function () {
+                window.location.href = "/profile";
+            })
     });
 });

@@ -6,7 +6,6 @@ var passport = require("passport");
 var session = require("express-session");
 var env = require("dotenv").load();
 var helpers = require("handlebars-helpers")();
-var amazon = require('amazon-product-api');
 
 var PORT = process.env.PORT || 3000;
 
@@ -24,12 +23,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(express.static("public"));
-
-var client = amazon.createClient({
-    awsId: "AKIAJKPMV5NYCWHQ4PRA",
-    awsSecret: "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",
-    awsTag: "FenixRising13"
-});
 
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);

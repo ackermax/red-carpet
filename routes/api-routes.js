@@ -3,11 +3,16 @@
 
 // Requiring our models
 var db = require("../models");
-
+var amazon = require('amazon-product-api');
 // Routes
 // =============================================================
 module.exports = function (app) {
   app.post("/api/amazon", function (req, res) {
+    var client = amazon.createClient({
+      awsId: "AKIAJKPMV5NYCWHQ4PRA",
+      awsSecret: "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",
+      awsTag: "FenixRising13"
+    });
 
     var movie = req.body.movie
 

@@ -7,6 +7,16 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function (app) {
+  app.put("/api/usermovies/update", function (req, res) {
+    db.UserMovie.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    })
+    .then(function(dbUserMovie){
+      res.json(dbUserMovie);
+    });
+  });
 
   // GET route for getting all of the Movies
 
@@ -53,7 +63,7 @@ module.exports = function (app) {
       console.log(answer);
       if (answer == null) {
         db.UserMovie.create(query).then(function (dbUserMovie) {
-          res.status(200);
+          res.json(dbUserMovie);
         });
       }
       else {

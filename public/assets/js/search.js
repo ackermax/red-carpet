@@ -68,7 +68,7 @@ $(document).ready(function () {
             won: won
         };
         $.post("/api/usermovies", query, function (data) {
-            Materialize.toast('Movie added to your watchlist!', 4000);
+            Materialize.toast(nominee + ' added to your watchlist!', 4000);
         });
     });
 });

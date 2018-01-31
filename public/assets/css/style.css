@@ -4,7 +4,7 @@
     flex-direction: column;
     background-image: url("../images/bg.png");
     background-color: black;
-    color: white;    
+    color: white;
     font-family: 'Roboto', sans-serif;
   }
 
@@ -104,7 +104,7 @@
 
   /* Media Queries */
 
-@media screen and (max-width:980px) {  
+@media screen and (max-width:980px) {
 }
 
 @media screen and (max-width:768px) {
@@ -113,10 +113,10 @@
 @media screen and (max-width:640px) {
 }
 
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
 }
 
-/* Adjust size of title on smaller screens  */
+/* Adjust size of title on smaller screens */
 @media (max-width: 640px) {
     .brand-logo {
       font-size: 1.5em !important;

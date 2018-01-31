@@ -80,14 +80,7 @@ OMDB API can provide awards information
 
 ### New Technology
 
-Passport - Jason
-
-### Buzzwords
-
-Time Management??? - Movie tickets… Streaming Options
-Automation???
-Parenting - Content (Nice to Have)
-Music - Soundtracks (Nice to Have)
+Passport - Jason & Max
 
 ## Authors
 
@@ -97,9 +90,5 @@ Music - Soundtracks (Nice to Have)
 + Steve **W**alker https://github.com/captnwalker
 + Jason **A**pfel https://github.com/jasapper
   - *Team Lead: Max*
-
-## License
-
-????
 
 ![Filmocat](https://octodex.github.com/images/filmtocat.png)

@@ -11,7 +11,7 @@
                 <h3 class="header brand-red brand-logo">{{name}}'s&nbsp;Queue</h3>
                 <div class="divider"></div>
                 <br> {{#if UserMovie}}
-                <h4 class="brand-red brand-logo">Not Watched</h4>
+                <h4 class="brand-red brand-logo" id="watch">Not Watched</h4>
                 {{#each UserMovie}}{{#unless dataValues.watched}} {{#if dataValues.won}}
                 <div class="card horizontal amber z-depth-2">
                     {{else}}
@@ -25,7 +25,7 @@
                             <div class="card-content">
                                 <h5>{{dataValues.nominee}} - ({{dataValues.category}})</h5>
                                 <h6>{{dataValues.addinfo}}</h6>
-
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             </div>
 
                             <!-- Actions at bottom of card -->
@@ -34,13 +34,13 @@
                                 <a href="#" class="waves-effect waves-light btn watched-button left red darken-4" data-id={{dataValues.id}}>Rate or Delete</a>
 
                                 <!-- Modal Trigger -->
-                                <a class="waves-effect waves-light btn modal-trigger right orange" href="#modal1">Where to Watch</a>
+                                <a class="waves-effect waves-light btn right orange where-watch" nominee="{{dataValues.nominee}}" href="#">Where to Watch</a>
                             </div>
                         </div>
 
                     </div>
                     {{/unless}} {{/each}}
-                    <h4 class="brand-red brand-logo">Watched</h4>
+                    <h4 class="brand-red brand-logo" id="watch">Watched</h4>
                     {{#each UserMovie}}{{#if dataValues.watched}} {{#if dataValues.won}}
                     <div class="card horizontal amber z-depth-2">
                         {{else}}
@@ -54,7 +54,9 @@
                                 <div class="card-content">
                                     <h5>{{dataValues.nominee}} - ({{dataValues.category}})</h5>
                                     <h6>{{dataValues.addinfo}}</h6>
-
+                                    <a href="https://twitter.com/intent/tweet?&ref_src=twsrc%5Etfw" class="twitter-hashtag-button align-right" data-size="large"
+                                        data-text="I just rated {{dataValues.category}}{{#if dataValues.won}} winner {{else}} nominee {{/if}}{{dataValues.nominee}} {{dataValues.rating}} stars on @TheRedCarpetApp. What did you think of the film?"
+                                        data-related="TheRedCarpetApp" data-show-count="false">Tweet #tweet</a>
                                 </div>
 
                                 <!-- Actions at bottom of card -->
@@ -78,7 +80,7 @@
                                         <i class="material-icons">star</i>{{/is}}</a>
 
                                     <!-- Modal Trigger -->
-                                    <a class="waves-effect waves-light btn modal-trigger right orange" href="#modal1">Where to Watch</a>
+                                    <a class="waves-effect waves-light btn right orange where-watch" nominee="{{dataValues.nominee}}" href="#">Where to Watch</a>
                                 </div>
                             </div>
 

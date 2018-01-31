@@ -5,6 +5,7 @@ var exphbs = require("express-handlebars");
 var passport = require("passport");
 var session = require("express-session");
 var env = require("dotenv").load();
+var helpers = require("handlebars-helpers")();
 
 var PORT = process.env.PORT || 3000;
 

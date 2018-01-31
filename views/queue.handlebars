@@ -8,8 +8,11 @@
 
             <div class="col s12 m12">
                 <!-- Display users name at top of card -->
-                <h4 class="header brand-red brand-logo">{{name}}'s&nbsp;Queue</h4>
-                {{#if UserMovie}} {{#each UserMovie}} {{#if dataValues.won}}
+                <h3 class="header brand-red brand-logo">{{name}}'s&nbsp;Queue</h3>
+                <div class="divider"></div>
+                <br> {{#if UserMovie}}
+                <h4 class="brand-red brand-logo">Not Watched</h4>
+                {{#each UserMovie}}{{#unless dataValues.watched}} {{#if dataValues.won}}
                 <div class="card horizontal amber z-depth-2">
                     {{else}}
                     <div class="card horizontal deep-purple z-depth-2">
@@ -36,30 +39,74 @@
                         </div>
 
                     </div>
-                    {{/each}} {{else}}
+                    {{/unless}} {{/each}}
+                    <h4 class="brand-red brand-logo">Watched</h4>
+                    {{#each UserMovie}}{{#if dataValues.watched}} {{#if dataValues.won}}
+                    <div class="card horizontal amber z-depth-2">
+                        {{else}}
+                        <div class="card horizontal deep-purple z-depth-2">
+                            {{/if}}
+                            <!-- Displays Movie Poster on Right Side of Card -->
+                            <div class="card-image">
+                                <img src={{dataValues.poster}}>
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <h5>{{dataValues.nominee}} - ({{dataValues.category}})</h5>
+                                    <h6>{{dataValues.addinfo}}</h6>
 
-                    <h5 style="color: black; text-align: center;">Looks like you don't have any prestige movies on the list. Why not add some?</h5>
-                    <div class="valign-wrapper">
-                        <a href="/search" class="waves-effect waves-light btn red darken-4 center" id="no-saved-movies">Search for Movies!</a>
+                                </div>
+
+                                <!-- Actions at bottom of card -->
+                                <div class="card-action">
+                                    <!-- Star Rating System Goes Here -->
+                                    <a class="waves-effect waves-light btn watched-button left red darken-4" data-id={{dataValues.id}}>{{#is dataValues.rating 1}}
+                                        <i class="material-icons">star</i>{{/is}}{{#is dataValues.rating 2}}
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>{{/is}}{{#is dataValues.rating 3}}
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>{{/is}}{{#is dataValues.rating 4}}
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>{{/is}}{{#is dataValues.rating 5}}
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>
+                                        <i class="material-icons">star</i>{{/is}}</a>
+
+                                    <!-- Modal Trigger -->
+                                    <a class="waves-effect waves-light btn modal-trigger right orange" href="#modal1">Where to Watch</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        {{/if}} {{/each}} {{else}}
+
+                        <h5 style="color: black; text-align: center;">Looks like you don't have any prestige movies on the list. Why not add some?</h5>
+                        <div class="valign-wrapper">
+                            <a href="/search" class="waves-effect waves-light btn red darken-4 center" id="no-saved-movies">Search for Movies!</a>
+                        </div>
+                        {{/if}}
                     </div>
-                    {{/if}}
+
+                    <!-- Close row-results-->
                 </div>
 
-                <!-- Close row-results-->
+                <!-- Close container -->
             </div>
 
-            <!-- Close container -->
-        </div>
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal modal-fixed-footer">
-            <div class="modal-content">
-                <h4>Modal Header</h4>
-                <p>A bunch of text</p>
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal modal-fixed-footer">
+                <div class="modal-content" id="modal-fill">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-light red darken-4 btn">Dismiss</a>
+                </div>
             </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-light red darken-4 btn">Dismiss</a>
-            </div>
-        </div>
 
 </main>

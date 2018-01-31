@@ -1,26 +1,20 @@
 # Red-Carpet :clapper: :movie_camera:
 
 ## Table of Contents
-- [Red-Carpet ](#red-carpet-clapper-moviecamera)
-	- [Table of Contents:](#table-of-contents)
+
 	- [Concept](#concept)
 	- [Deployment](#deployment)
 	- [Screenshots of this Project](#screenshots-of-this-project)
-	- [API](#api)
-	- [Needs](#needs)
-		- [Nice to Haves](#nice-to-haves)
-	- [Database](#database)
+	- [API's](#apis)
+	- [Database Structure](#database-structure)
 	- [Technologies](#technologies)
-		- [New Technology](#new-technology)
-		- [Buzzwords](#buzzwords)
 	- [Authors](#authors)
-	- [License](#license)
 
 ## Concept
 
 >Create and manage your own personal list of award winning (and nominated films), with reviews, a watched list, and priority lists based on which awards shows are coming up next. Red Carpet is the perfect tool for your elitist movie-watching needs!
 
-## Deployment
+## Deployment- [Red-Carpet :clapper: :movie_camera:](#red-carpet-clapper-moviecamera)
 
 This app has been deployed to Heroku and can be used by following the link below:
 
@@ -34,11 +28,14 @@ This app has been deployed to Heroku and can be used by following the link below
 
 ![Red Carpet Queue Page](https://raw.github.com/ackermax/red-carpet/master/screenshots/screenshot3.png "Red Carpet Queue Page")
 
-## API
 
-OMDB API can provide awards information
+## API's
 
-## Database
+* TMDB.org
+* Amazon
+
+## Database Structure
+
 
 ```
 * Table
@@ -77,10 +74,10 @@ OMDB API can provide awards information
 * Path - https://www.npmjs.com/package/path
 * Sequelize - https://www.npmjs.com/package/sequelize
 * Sequelize-CLI - https://www.npmjs.com/package/sequelize-cli
+* dotenv - https://www.npmjs.com/package/dotenv
+* handlebars-helpers - https://www.npmjs.com/package/handlebars-helpers
+* passport - https://www.npmjs.com/package/passport
 
-### New Technology
-
-Passport - Jason & Max
 
 ## Authors
 

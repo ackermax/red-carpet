@@ -7,6 +7,24 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function (app) {
+  app.post("/api/amazon", function (req, res) {
+
+    var movie = req.body.movie
+
+    client.itemSearch({
+      title: movie,
+      searchIndex: 'DVD',
+      MerchantId: 'Amazon',
+      responseGroup: 'ItemAttributes'
+    }).then(function (results) {
+      var response = results[0].DetailPageURL[0];
+      res.json(response);
+
+    }).catch(function (err) {
+      console.log(err);
+    });
+  });
+
   app.put("/api/usermovies/update", function (req, res) {
     db.UserMovie.update(req.body, {
       where: {
@@ -24,9 +42,9 @@ module.exports = function (app) {
         id: req.params.id
       }
     })
-    .then(function(dbUserMovie){
-      res.json(dbUserMovie);
-    });
+      .then(function (dbUserMovie) {
+        res.json(dbUserMovie);
+      });
   });
 
   // GET route for getting all of the Movies

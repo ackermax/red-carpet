@@ -31,8 +31,9 @@
                                 <input class="validate black-text" id="password" name="password" type="password" />
                             </div>
                             <div class="input-field col s6">
-                                <label for="password2">Verify Password</label>
+                                <label for="confirmPassword">Verify Password</label>
                                 <input class="validate black-text" id="confirmPassword" name="confirmPassword" type="password" />
+                                    <div class="brand-red" id="checkPassword"></div>
                             </div>
                         </div>
                         <div class="col s12" style="text-align:center">
@@ -50,7 +51,7 @@
                 var password = $("#password").val();
                 var confirmPassword = $("#confirmPassword").val();
                 if (password != confirmPassword) {
-                    alert("Passwords do not match!");
+                    $("#checkPassword").html("Passwords do not match!");
                     return false;
                 }
                 return true;

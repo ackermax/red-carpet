@@ -22,4 +22,9 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/watchlist.html"));
   });
 
+  // privacy route loads privacypolicy.html
+  app.get("/privacy", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/privacypolicy.html"));
+  });
+
 };

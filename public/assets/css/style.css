@@ -95,15 +95,22 @@
     position: absolute;
     top: 80%;
   }
+
   .relative {
     position: relative;
-}
+  }
 
-.card.horizontal {
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-    }
+  .card.horizontal {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  #no-saved-movies {
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 
   /* Media Queries */
@@ -125,10 +132,4 @@
     .brand-logo {
       font-size: 1.5em !important;
     }
-}
-
-#no-saved-movies {
-  margin-bottom: 2%;
-  margin-left: auto;
-  margin-right: auto;
 }

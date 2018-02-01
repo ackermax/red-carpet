@@ -1,5 +1,5 @@
 // Code to bypass splash page on mobile devices
-if (screen.width <= 699) {
+if (screen.width <= 799) {
     location.href = "/search";
 }
 

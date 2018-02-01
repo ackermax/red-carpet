@@ -1,6 +1,7 @@
 html {
     height: 100%;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -37,6 +38,7 @@ body {
     -ms-box-sizing: content-box;
     box-sizing: content-box;
 }
+
 .searchlight.on {
     background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%); /* FF3.6+ */
     background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
